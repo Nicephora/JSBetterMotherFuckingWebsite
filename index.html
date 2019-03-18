@@ -20,25 +20,86 @@
     h3 {
       line-height: 1.2
     }
+
+    .psycheMode {
+      -moz-box-shadow: inset 0px 1px 0px 0px #7a8eb9;
+      -webkit-box-shadow: inset 0px 1px 0px 0px #7a8eb9;
+      box-shadow: inset 0px 1px 0px 0px #7a8eb9;
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #637aad), color-stop(1, #f76c6c));
+      background: -moz-linear-gradient(top, #637aad 5%, #f76c6c 100%);
+      background: -webkit-linear-gradient(top, #637aad 5%, #f76c6c 100%);
+      background: -o-linear-gradient(top, #637aad 5%, #f76c6c 100%);
+      background: -ms-linear-gradient(top, #637aad 5%, #f76c6c 100%);
+      background: linear-gradient(to bottom, #637aad 5%, #f76c6c 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#637aad', endColorstr='#f76c6c', GradientType=0);
+      background-color: #637aad;
+      border: 1px solid #ffffff;
+      display: inline-block;
+      cursor: pointer;
+      color: #ffffff;
+      font-family: Arial;
+      font-size: 16px;
+      font-weight: bold;
+      padding: 15px 12px;
+      text-decoration: none;
+    }
+
+    .psycheMode:hover {
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #f76c6c), color-stop(1, #637aad));
+      background: -moz-linear-gradient(top, #f76c6c 5%, #637aad 100%);
+      background: -webkit-linear-gradient(top, #f76c6c 5%, #637aad 100%);
+      background: -o-linear-gradient(top, #f76c6c 5%, #637aad 100%);
+      background: -ms-linear-gradient(top, #f76c6c 5%, #637aad 100%);
+      background: linear-gradient(to bottom, #f76c6c 5%, #637aad 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f76c6c', endColorstr='#637aad', GradientType=0);
+      background-color: #f76c6c;
+    }
+
+    .psycheMode:active {
+      position: relative;
+      top: 1px;
+    }
   </style>
   <script type="text/javascript">
     setTimeout(function() {
-      window.open("https://nicephora.github.io/JSBetterMotherFuckingWebsite/popUp.html", "unSuperSite", width = '50px', height = '50px');
-    }, 10000)
+      var w = 400;
+      var h = 400;
+      var left = Number((screen.width / 2) - (w / 2));
+      var tops = Number((screen.height / 2) - (h / 2));
+      window.open("https://nicephora.github.io/JSBetterMotherFuckingWebsite/popUp.html", '', 'toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width=' + w + ', height=' + h + ', top=' +
+        tops + ', left=' + left);}, 10000)
+
+    function changeMyMotherFuckingCSS() {
+      document.getElementById('body').style.cssText = 'background-color:#FF00FF;'
+
+      var p = document.getElementsByTagName("p");
+      for (var i = 0; i < p.length; i++) {
+        p[i].style.cssText = 'color:blue; font-family: Papyrus, fantasy;';
+      }
+
+      var h = document.querySelectorAll('h1, h2, h3');
+      for (var k = 0; k < h.length; k++) {
+        h[k].style.cssText = "color: green; font-family: 'Comic Sans MS', 'Comic Sans', cursive;"
+
+      }
+
+    }
   </script>
 
 
 </head>
 
-<body>
+<body id="body">
 
   <header>
+    <a href="#" onclick="changeMyMotherFuckingCSS();" class="psycheMode">Mode Psychédélique</a>
+
     <h1>This is <em>still</em> a motherfucking website.</h1>
     <aside>And it's more fucking perfect than the last guy's.</aside>
   </header>
   <h2>Seriously, it takes minimal fucking effort to improve this shit.</h2>
   <p><strong>7 fucking declarations.</strong></p>
-  <p>That's how much CSS it took to turn that
+  <p id="p">That's how much CSS it took to turn that
     <a href="http://motherfuckingwebsite.com/">grotesque pile of shit</a> into this easy-to-read masterpiece. It's so fucking simple and it <em>still</em> has all the glory of the original perfect-ass website:</p>
   <ul>
     <li>Shit's <em>still</em> lightweight and loads fast</li>
@@ -50,26 +111,31 @@
   <h3>And guess what, motherfucker:</h3>
   <p>You never knew it, but it's easy to improve readability on your site. Here's how.</p>
   <h2>Let it breathe</h2>
-  <p>Look at lines 1 and 2 of some shitty website you're building. Assuming they're not married they probably shouldn't be humping. The defaults are trash -- pick a minimum <code>line-height: 1.4</code> for body copy. Headings should be tighter. If
+  <p id="p">Look at lines 1 and 2 of some shitty website you're building. Assuming they're not married they probably shouldn't be humping. The defaults are trash -- pick a minimum <code>line-height: 1.4</code> for body copy. Headings should be
+    tighter. If
     you can't see that...piss off.</p>
-  <p>If your text hits the side of the browser, fuck off forever. You ever see a book like that? Yes? What a shitty book.</p>
+  <p id="p">If your text hits the side of the browser, fuck off forever. You ever see a book like that? Yes? What a shitty book.</p>
   <h2>A little less contrast</h2>
-  <p>Black on white? How often do you see that kind of contrast in real life? Tone it down a bit, asshole. I would've even made this site's background a nice <code>#EEEEEE</code> if I wasn't so focused on keeping declarations to a lean 7 fucking
+  <p id="p">Black on white? How often do you see that kind of contrast in real life? Tone it down a bit, asshole. I would've even made this site's background a nice <code>#EEEEEE</code> if I wasn't so focused on keeping declarations to a lean 7
+    fucking
     lines.</p>
   <h2>Size Matters</h2>
-  <p>I know your partner says otherwise, but it's true. Bump that body copy to render close to 16px or more. Smaller type works well for print, not the screen.</p>
+  <p id="p">I know your partner says otherwise, but it's true. Bump that body copy to render close to 16px or more. Smaller type works well for print, not the screen.</p>
   <h2>Line-width, motherfucker</h2>
-  <p>Looking at an LCD screen is strainful enough. Don't make me read a line of text that's 200 fucking characters long. Keep it to a nice 60-80 and users might actually read more than one sentence of your worthless dribble.</p>
+  <p id="p">Looking at an LCD screen is strainful enough. Don't make me read a line of text that's 200 fucking characters long. Keep it to a nice 60-80 and users might actually read more than one sentence of your worthless dribble.</p>
   <h3>Yes, this is <em>also</em> fucking satire, you fuck</h3>
-  <p>I love what the creator of <a href="http://motherfuckingwebsite.com/">this site's inspiration</a> did. What I'm saying is that it's so, so simple to make sites easier to read. Websites are broken by default, they are functional, high-performing,
+  <p id="p">I love what the creator of <a href="http://motherfuckingwebsite.com/">this site's inspiration</a> did. What I'm saying is that it's so, so simple to make sites easier to read. Websites are broken by default, they are functional,
+    high-performing,
     and accessible, but they're also fucking ugly. You and all the other web designers out there need to make them not total shit.</p>
   <blockquote>"You're a fucking moron if you use default browser styles."
     <br>
     - Eleanor Roosevelt</blockquote>
   <hr>
   <h2>Epilogue</h2>
-  <p>Inspired by the geniuses behind <a href="http://motherfuckingwebsite.com/">motherfuckingwebsite.com</a> and <a href="http://txti.es">txti</a>.</p>
-  <p>This page&mdash;that isn't a total fucking eyesore&mdash;was created by <a href="https://twitter.com/drew_mc">me</a> with help from <a href="https://twitter.com/gabehammersmith">him</a>.
+  <p id="p">Inspired by the geniuses behind <a href="http://motherfuckingwebsite.com/">motherfuckingwebsite.com</a> and <a href="http://txti.es">txti</a>.</p>
+  <p id="p">This page&mdash;that isn't a total fucking eyesore&mdash;was created by <a href="https://twitter.com/drew_mc">me</a> with help from <a href="https://twitter.com/gabehammersmith">him</a>.
+
+
 </body>
 
 </html>
